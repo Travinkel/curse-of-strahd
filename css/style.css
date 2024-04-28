@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700;900&display=swap');
+
+body { 
+    background-color: #0f0202; /* Darker background for better contrast */
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 60%, #900 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #900; /* Solid color as a fallback */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    color: #8b0000; /* Fallback for browsers that don't support gradient on text */
+    background: linear-gradient(to bottom, #8b0000 5%, #ff0000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin: 20px 0;
+}
+
+
+
+
+.letter {
+    background-image: url('../images/overlay_texture.webp'), url('../images/parchment_bg.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply; /* Use a blend mode that makes the overlay visible */
+    padding: 20px;
+    margin: auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    color: #fff;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    background: linear-gradient(to bottom, #8b0000 0%, #ff0000 100%);
+    border: none;  /* Removing any border for a clean look */
+    color: #eee; /* Adjusting text color for better visibility */
+    padding: 10px 20px; /* Adequate padding for button size */
+    font-size: 18px; /* Suitable font size for readability */
+    text-transform: uppercase; /* Maintain uppercase for a formal look */
+    letter-spacing: 1px; /* Slight spacing to enhance readability */
+    font-family: 'Merriweather', serif; /* Consistency in font usage */
+    text-decoration: none; /* Remove any underline or decoration */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    border-radius: 4px; /* Slightly rounded corners */
+    display: inline-block; /* Ensures proper button formatting */
+    cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+}
+
+.button:hover, .button:focus {
+    background: linear-gradient(to bottom, #ff0000 0%, #8b0000 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.75); /* Enhanced shadow on hover/focus */
+    color: #ffffff; /* Ensuring text color is white for better contrast on hover/focus */
+    transform: translateY(-2px); /* Subtle lift effect on hover/focus */
+    outline: none; /* Removing default focus outline */
+}
+
+.button:focus {
+    outline: 2px solid #ff0000; /* Custom focus outline to match theme */
+    outline-offset: 2px; /* Space between outline and button edge */
+}
+
+
+
+
+:focus {
+    outline: 2px dashed #8b0000; /* High contrast outline for focus */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px; /* Smaller font size for mobile devices */
+    }
+    .button {
+        padding: 10px 20px; /* Slightly larger padding on mobile for easier interaction */
+        font-size: 18px; /* Keeping the font readable on smaller devices */
+    }
+
+    .letter {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    p {
+        font-size: 16px; /* Smaller text for easier reading on small screens */
+    }
+}
