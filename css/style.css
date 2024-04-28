@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@400;700;900&display=swap');
 
+html, body {
+    width: 100%;  /* Full width */
+    height: 100%;  /* Full height */
+    margin: 0;  /* Remove default margins */
+    padding: 0;  /* Remove default padding */
+}
+
+
+
+
 body { 
+    font-family: 'Merriweather', serif;
+    font-weight: bold; /* Ensures text is bold enough */
+    font-size: 18px; /* Or size appropriate for your design */
     background-color: #0f0202; /* Darker background for better contrast */
 }
 
 p {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+    padding: 5px; /* Padding to separate text from the background */
+    border-radius: 5px; /* Softens the edges */
     font-family: 'Merriweather', serif;
     font-size: 18px;
     line-height: 1.6;
-    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 60%, #900 100%);
+    background: linear-gradient(to bottom, #8b0000 5%, #ff0000 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #900; /* Solid color as a fallback */
@@ -29,10 +45,23 @@ h1 {
     margin: 20px 0;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width calculations */
+}
+
 
 
 
 .letter {
+    filter: sepia(0.2); /* Gives a slight old-time feel enhancing the gothic theme */
+
     background-image: url('../images/overlay_texture.webp'), url('../images/parchment_bg.webp');
     background-size: cover;
     background-repeat: no-repeat;
@@ -66,6 +95,8 @@ h1 {
     border-radius: 4px; /* Slightly rounded corners */
     display: inline-block; /* Ensures proper button formatting */
     cursor: pointer; /* Cursor to pointer to indicate it's clickable */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+
 }
 
 .button:hover, .button:focus {
@@ -74,6 +105,8 @@ h1 {
     color: #ffffff; /* Ensuring text color is white for better contrast on hover/focus */
     transform: translateY(-2px); /* Subtle lift effect on hover/focus */
     outline: none; /* Removing default focus outline */
+    transform: scale(1.03); /* Slightly enlarging button on hover for visual feedback */
+
 }
 
 .button:focus {
@@ -90,19 +123,10 @@ h1 {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 32px; /* Smaller font size for mobile devices */
+        font-size: 24px; /* Further reduction if needed based on actual device testing */
     }
-    .button {
-        padding: 10px 20px; /* Slightly larger padding on mobile for easier interaction */
-        font-size: 18px; /* Keeping the font readable on smaller devices */
-    }
-
-    .letter {
-        padding: 20px;
-        margin: 10px;
-    }
-
-    p {
-        font-size: 16px; /* Smaller text for easier reading on small screens */
+    .content, .letter {
+        padding: 15px; /* Adjust padding for smaller screens to ensure content does not feel cramped */
     }
 }
+
